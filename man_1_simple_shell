@@ -1,11 +1,11 @@
-.TH SIMPLE_SHELL 1 "3 November 2021" "1.0" "custom man page"
+.TH SIMPLE_SHELL 1 "14 April 2021" "1.0" "custom man page"
 .SH NAME
 .B Simple Shell
 - command language interpreter
 .SH SYNOPSIS
 .B Simple Shell
 .SH DESCRIPTION
-Simple shell is one version of a command language interpreter that executes commands read from the standard input. It's functionality is limited to certain shell builtin functions found in the environmental variable
+The Simple Shell's functionality involves certain shell builtin functions found in the environmental variable.
 .I PATH.
 It does not yet handle piping, redirection, pattern matching, variable expansions, and more extra functions.
 .SS Invocation
@@ -13,7 +13,7 @@ An
 .I interactive
 simple shell can be invoked by typing ./simple_shell. Meanwhile, a
 .I non-interactive
-simple shell can also be invoked via a pipe (e.g. echo "/bin/ls" | ./simple_shell).
+simple shell can also be invoked via a pipe (e.g. echo "/bin/ls" | ./hsh).
 .SS Command Execution
 After a command has been split into words, if it results in a simple command and an optional list of arguments, the following actions are taken.
 .sp
@@ -33,9 +33,6 @@ ls
 pwd
       prints working directories
 .sp
-whereis
-.I [command]
-      prints to standard output which directory the function or shell builtin can be found
 .SS Shell Builtin Commands
 .sp
 cd
@@ -58,43 +55,42 @@ To
 simple shell:
 .sp
 .RS
-(your_terminal)$ ./simple_shell
+(your_terminal)$ ./hsh
 .RE
 .RS
-.I $
+.I #cisfun$
 .RE
 .sp
-Sample Usage:
+Usage:
 .sp
 .RS
-.I $
-echo "This is pretty cool!"
+.I #cisfun$
+echo "simple shell easy!"
 .RE
 .RS
-.I This is pretty cool!
+.I simple shell easy!
 .RE
 .RS
-.I $
+.I #cisfun$
 ls -l /tmp
 .RE
 .RS
 .I total 4
 .RE
 .RS
-.I drwx------ 2 vagrant vagrant 4096 Mar 19 20:22 ssh-xTKqci
+.I -rw-r--r-- 1 root root 158 Apr 14 07:43 AUTHORS 
 .RE
 .sp
-To leave simple shell and return to your terminal:
+To exit and return to your terminal:
 .sp
 .RS
-.I $
+.I @cisfun$
 exit
 .RE
 .RS
 (your_terminal)$
 .RE
 .SH BUGS
-Bugs...
-.SH SEE ALSO
-.I bash(1), sh(1), ksh(1), csh(1)
+No known bugs
 .SH AUTHORS
+WARREN INZIANI
